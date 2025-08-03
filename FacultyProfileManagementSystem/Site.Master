@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="FacultyProfileManagementSystem.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Faculty Profile Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        .header { background-color: #003366; color: white; padding: 15px; text-align: center; }
+        .header img { width: 50px; vertical-align: middle; }
+        .nav { background-color: #f2f2f2; overflow: hidden; }
+        .nav a { float: left; display: block; color: #333; text-align: center; padding: 14px 16px; text-decoration: none; }
+        .nav a:hover { background-color: #ddd; color: black; }
+        .nav .active { background-color: #0055a5; color: white; }
+        .welcome-banner { text-align: right; padding: 10px; background-color: #e9ecef; }
+        .main-content { padding: 20px; }
+        .footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <img src="Images/logo.png" alt="Institute Logo" />
+            <h1>Faculty Profile Management System</h1>
+        </div>
+
+        <div class="nav">
+            <asp:HyperLink ID="lnkHome" NavigateUrl="~/FacultyProfile.aspx" runat="server">Add Profile</asp:HyperLink>
+            <asp:HyperLink ID="lnkLogout" NavigateUrl="~/Login.aspx?logout=true" runat="server" style="float: right;">Logout</asp:HyperLink>
+        </div>
+
+        <div class="welcome-banner">
+            <asp:Label ID="lblWelcome" runat="server"></asp:Label>
+        </div>
+
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!-- Page-specific content will go here -->
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="footer">
+            © <%: DateTime.Now.Year %> - Faculty Profile Management System
+        </div>
+    </form>
+</body>
+</html>
