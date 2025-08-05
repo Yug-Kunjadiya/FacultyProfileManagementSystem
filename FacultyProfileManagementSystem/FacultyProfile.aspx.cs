@@ -13,8 +13,16 @@ namespace FacultyProfileManagementSystem
 {
     public partial class FacultyProfile : System.Web.UI.Page
     {
+
+        string connectionString = ConfigurationManager.ConnectionStrings["facultyDBConnectionString2"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            SqlConnection con = new SqlConnection(connectionString);
+            con.Open();
+            Response.Write("");
+            con.Close();
+
             if (!IsPostBack)
             {
                 // ViewState retains control values on postback, so this runs only on initial load.
@@ -32,7 +40,8 @@ namespace FacultyProfileManagementSystem
                 string employeeId = $"{initials}{timestamp}";
 
                 // 2. Get connection string from Web.config
-                string connectionString = ConfigurationManager.ConnectionStrings["FacultyDBConnectionString"].ConnectionString;
+                //string connectionString = ConfigurationManager.ConnectionStrings["FacultyDBConnectionString"].ConnectionString;
+
 
                 // 3. Define the SQL INSERT query
                 // Using parameters (@ParamName) to prevent SQL Injection attacks
