@@ -4,9 +4,11 @@ A comprehensive web application built using **ASP.NET Web Forms**, designed to m
 
 <img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/75002d7f-87cf-4fb1-b334-5e3c7e1b3406" />
 
-<img width="1900" height="640" alt="image" src="https://github.com/user-attachments/assets/3373f583-480c-49d9-a7cb-dc01e8eeca38" />
+<img width="1919" height="876" alt="image" src="https://github.com/user-attachments/assets/97d9e25a-4ba4-44d1-b3cf-5781a98f5d21" />
+
 
 <img width="1900" height="640" alt="image" src="https://github.com/user-attachments/assets/60682cd8-1efd-41e7-8105-350e22225f28" />
+
 
 
 ---
